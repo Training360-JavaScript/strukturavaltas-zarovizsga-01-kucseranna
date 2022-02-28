@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { HomeComponent } from './page/home/home.component';
+import { CarComponent } from './page/car/car.component';
+import { CarEditorComponent } from './page/car-editor/car-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    CarComponent,
+    CarEditorComponent
   ],
   imports: [
     BrowserModule,
