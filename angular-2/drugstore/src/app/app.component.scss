@@ -1,13 +1,13 @@
 // 1/1. Használd a már létrehozott colors modult!
-
+@use 'colors';
 // 1/2. Használd a már létrehozott mixins modult!
-
+@use 'mixins';
 
 .container {
   align-items: center;
   // 2. Az animált tacskó hátterére állítsd be
   // a modul segítségével a következő színt: #d4e6ff
-
+  background-color: color.$background;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -36,6 +36,7 @@
     background-color: $background-phone;
     padding: 50px;
   }*/
+  @include mixins.for-phone-only
 }
 
 .yellow {
