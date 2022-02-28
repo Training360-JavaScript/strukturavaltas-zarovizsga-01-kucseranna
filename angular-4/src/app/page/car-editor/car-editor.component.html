@@ -1,1 +1,72 @@
-<p>car-editor works!</p>
+<div class="row">
+  <div *ngIf="car$ | async as car" class="col-6 offset-3">
+    <form #carForm="ngForm" (ngSubmit)="onUpdate(car)">
+      <input [(ngModel)]="car.id" type="hidden" name="id">
+      <div class="form-group">
+        <label for="car-model">Model</label>
+        <input
+          required
+          pattern=""
+          [(ngModel)]="car.model"
+          class="form-control"
+          type="text"
+          name="model"
+          id="car-model">
+      </div>
+      <div class="form-group">
+        <label for="car-make">Make</label>
+        <input
+          required
+          [(ngModel)]="car.make"
+          class="form-control"
+          type="text"
+          name="make"
+          id="car-make">
+      </div>
+      <div class="form-group">
+        <label for="car-year">Year</label>
+        <input
+          required
+          [(ngModel)]="car.year"
+          class="form-control"
+          type="number"
+          name="year"
+          id="car-year">
+      </div>
+      <div class="form-group">
+        <label for="car-price">Price</label>
+        <input
+          required
+          [(ngModel)]="car.price"
+          class="form-control"
+          type="number"
+          name="price"
+          id="car-price">
+      </div>
+      <div class="form-group">
+        <label for="car-stock">Stock</label>
+        <input
+          required
+          [(ngModel)]="car.stock"
+          class="form-control"
+          type="number"
+          name="stock"
+          id="car-stock">
+      </div>
+      <div class="form-group">
+        <label for="car-active">Category</label>
+        <input
+          required
+          [(ngModel)]="car.active"
+          class="form-control"
+          type="text"
+          name="active"
+          id="car-active">
+      </div>
+      <button [disabled]="carForm.invalid" type="submit" class="btn btn-primary btn-block">
+        <i class="fa fa-save"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
