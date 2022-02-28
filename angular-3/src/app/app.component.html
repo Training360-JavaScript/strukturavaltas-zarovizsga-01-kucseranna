@@ -14,17 +14,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let row of list$ | async" >
-            <td> {{row.id}} </td>
-            <td> {{row.material}} </td>
-            <td> {{row.trade}} </td>
-            <td> {{row.cost_code}} </td>
-            <td> {{row.price}} </td>
-            <td> {{row.active}} </td>
+          <tr *ngFor="let construction of list$ | async" >
+            <td> {{construction.id}} </td>
+            <td> {{construction.material}} </td>
+            <td> {{construction.trade}} </td>
+            <td> {{construction.cost_code}} </td>
+            <td> {{construction.price}} </td>
+            <td> {{construction.active}} </td>
             <td>
-              <button  class="btn btn-danger">
+              <div>
+              <button (click)="onDelete(construction)" type="button" class="btn btn-danger">
                 <i class="fa fa-trash"></i>
-              </button> </td>
+              </button> </div></td>
           </tr>
         </tbody>
       </table>
