@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Construction } from './modell/construction';
+import { Construction } from './model/construction';
 import { ConstructionService } from './service/construction.service';
 
 @Component({
